@@ -14,14 +14,18 @@ class ViewController: UIViewController {
     @IBOutlet weak var Label101: UILabel!
     
     @IBOutlet weak var label2: UILabel!
+    @IBOutlet weak var txtFirstNum: UITextField!
     
+    @IBOutlet weak var txtSecondNum: UITextField!
     var tabcount = 0
     @IBAction func button1(_ sender: Any) {
+    
+        label2.text = String(Double(txtFirstNum.text!)! + Double(txtSecondNum.text!)!)
+        Label101.text = " answer is \(Double(txtFirstNum.text!)! + Double(txtSecondNum.text!)!)"
         
         
-       // Label101.text = "label has changed "
-        //label2.text = "buttons are cool"
-        //print("button is pressed")
+        
+        
          tabcount = tabcount + 1
         print (tabcount)
         if tabcount == 10 {
